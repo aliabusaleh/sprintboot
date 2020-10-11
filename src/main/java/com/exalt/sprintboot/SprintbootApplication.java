@@ -35,7 +35,7 @@ public class SprintbootApplication {
     }
     /*
     * This command liner print in the run command line for debugging ! */
-    @Bean
+   // @Bean
     /*
     * to change the profile for this command use this annotation where "dev" is the <profile name>
     * */
