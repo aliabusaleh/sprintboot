@@ -4,6 +4,9 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.elasticsearch.annotations.DateFormat;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.EntityListeners;
@@ -17,12 +20,14 @@ public abstract class Auditable {
     @CreatedBy
     private String createdBy;
 
+    @Field(type = FieldType.Date, format = DateFormat.custom, pattern = "YYYY-MM-DD'T'HH:mm:ss.SSS")
     @CreatedDate
     private LocalDateTime creationDate;
 
     @LastModifiedBy
     private String lastModifiedBy;
 
+    @Field(type = FieldType.Date, format = DateFormat.custom, pattern = "YYYY-MM-DD'T'HH:mm:ss.SSS")
     @LastModifiedDate
     private LocalDateTime lastModifiedDate;
 

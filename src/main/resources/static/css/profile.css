@@ -1,0 +1,35 @@
+body {
+    background: #EBF0F4;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+.auto_complete_options {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+#profile a.nav-link {
+    text-transform: uppercase;
+}
+#profile a.nav-link.active {
+    border-bottom: 1px solid blue;
+}
+
+#profile > .row:first-child {
+    margin-bottom:20px;
+}
+
+.card {
+    margin-bottom: 5px;
+}
+
+.card-img-top {
+    padding-top:10px;
+}
+
+.recentLinks {
+    padding-top:10px;
+}
